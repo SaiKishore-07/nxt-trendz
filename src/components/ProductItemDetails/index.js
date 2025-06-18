@@ -1,11 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
-import { Oval } from "react-loader-spinner";
+import ClipLoader from "react-spinners/ClipLoader";
 import { BsPlusSquare, BsDashSquare } from "react-icons/bs";
-
-
-
 
 import CartContext from "../../context/CartContext";
 import Header from "../Header";
@@ -83,14 +80,12 @@ const ProductItemDetails = () => {
   };
 
   const onClickAddToCart = () => {
-  addCartItem({ ...productData, quantity });
-  
-};
-
+    addCartItem({ ...productData, quantity });
+  };
 
   const renderLoadingView = () => (
     <div className="products-details-loader-container" data-testid="loader">
-      <Oval type="ThreeDots" color="#0b69ff" height="50" width="50" />
+      <ClipLoader color="#36d7b7" loading={true} size={50} />
     </div>
   );
 

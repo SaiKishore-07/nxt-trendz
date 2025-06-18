@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Oval } from "react-loader-spinner";
+import ClipLoader from "react-spinners/ClipLoader";
 import Cookies from "js-cookie";
 
 import FiltersGroup from "../FiltersGroup";
@@ -100,7 +100,7 @@ const AllProductsSection = () => {
 
   const renderLoadingView = () => (
     <div className="products-loader-container">
-      <Oval type="ThreeDots" color="#0b69ff" height={50} width={50} />
+      <ClipLoader color="#36d7b7" loading={true} size={50} />
     </div>
   );
 
